@@ -46,7 +46,7 @@ const App = () => {
                             </button>
                           </span>
                           :
-                          <span id={`see-more-${tour.id}`}>{`${tour.info.slice(0, 200)}`}
+                          <span id={`see-more-${tour.id}`}>{`${tour.info.substring(0, 200)}`}
                             <button className="show-more-btn" onClick={() => handleToggleInfo(tour.id)}>
                               See More
                             </button>
