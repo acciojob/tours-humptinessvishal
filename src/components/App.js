@@ -41,14 +41,14 @@ const App = () => {
                       {
                         showFullInfoFor === tour.id ?
                           <div>
-                            <span className="tour-info">{tour.info}</span>
+                            <p className="tour-info">{tour.info}</p>
                             <button className="show-less-btn" onClick={() => handleToggleInfo(tour.id)}>
                               See Less
                             </button>
                           </div>
                           :
                           <div>
-                            <span id={`see-more-${tour.id}`}>{`${tour.info.substring(0, 199)}`}</span>
+                            <p id={`see-more-${tour.id}`}>{`${tour.info.slice(0, 200)}`}</p>
                             <button className="show-more-btn" onClick={() => handleToggleInfo(tour.id)}>
                               See More
                             </button>
