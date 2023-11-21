@@ -40,17 +40,19 @@ const App = () => {
                     <div id={`tour-item-para-${tour.id}`}>
                       {
                         showFullInfoFor === tour.id ?
-                          <span className="tour-info">{tour.info}
+                          <div>
+                            <span className="tour-info">{tour.info}</span>
                             <button className="show-less-btn" onClick={() => handleToggleInfo(tour.id)}>
                               See Less
                             </button>
-                          </span>
+                          </div>
                           :
-                          <span id={`see-more-${tour.id}`}>{`${tour.info.substring(0, 199)}`}
+                          <div>
+                            <span id={`see-more-${tour.id}`}>{`${tour.info.substring(0, 199)}`}</span>
                             <button className="show-more-btn" onClick={() => handleToggleInfo(tour.id)}>
                               See More
                             </button>
-                          </span>
+                          </div>
                       }
                     </div>
                     <button id={`delete-btn-${tour.id}`} value={tour.id} onClick={() => handleDelete(tour.id)}>Delete Tour</button>
