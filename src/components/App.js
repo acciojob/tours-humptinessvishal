@@ -46,9 +46,11 @@ const App = () => {
                             </button>
                           </span>
                           :
-                          <button className="show-more-btn" onClick={() => handleToggleInfo(tour.id)}>
-                            See More
-                          </button>
+                          <span id={`see-more-${tour.id}`}>{`${tour.info.substring(0, 199)}`}
+                            <button className="show-more-btn" onClick={() => handleToggleInfo(tour.id)}>
+                              See More
+                            </button>
+                          </span>
                       }
                     </div>
                     <button id={`delete-btn-${tour.id}`} value={tour.id} onClick={() => handleDelete(tour.id)}>Delete Tour</button>
